@@ -1,0 +1,9 @@
+Peter:
+  name        : "Peter"
+  bio         : "Peters bio"
+  avatar      : "/assets/images/PeterProfile.jpg"
+
+Rob:
+  name        : "Rob"
+  bio         : "Rob's bio"
+  avatar      : "/assets/images/bio-photo.jpg"
