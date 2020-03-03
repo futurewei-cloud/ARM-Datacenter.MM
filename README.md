@@ -1,3 +1,13 @@
+# Getting started
+
+```
+git clone -b gh-pages https://github.com/PeterPuhov/ARM-Datacenter.MM.git
+cd ARM-Datacenter.MM
+bundle update
+bundle exec jekyll serve --host 127.0.0.1 --port 8080
+```
+
+
 # Minimal Mistakes remote theme starter
 
 Fork this repo for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
