@@ -1,5 +1,7 @@
 # Getting started
 
+This repo generates [ARM-Datacenter website](https://futurewei-cloud.github.io/ARM-Datacenter/).
+
 ## Install jekyll and dependencies
 ```
 sudo apt-get install ruby-full build-essential zlib1g-dev
