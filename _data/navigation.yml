@@ -8,4 +8,16 @@ main:
   - title: "Tags"
     url: /tags/
   - title: "About"
-    url: /about/
+    url: /about/      
+    
+site_map:
+  - title: "QEMU"
+    url: /qemu/home/
+    children:
+      - title: "Getting started"
+        url: /qemu/getting_started/
+  - title: "Linux Kernel Scheduler"
+    url: /lks/home/
+  - title: "User Space Scheduler"
+    url: /uss/home/
+      

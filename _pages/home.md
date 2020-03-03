@@ -1,9 +1,17 @@
 ---
-layout: splash
+layout: single
 permalink: /home/
-title: "Home"
+title: "Welcome to ARM-Datacenter blog!"
+sidebar:
+  nav: "site_map"
+author_profile: false
 ---
 
-My home page
+{::options auto_ids="false" /}
+
+## Mission statement  
+
+Software infrastructure that simplifies adoption of ARM
+based hardware in Datacenter environment.
 
  
