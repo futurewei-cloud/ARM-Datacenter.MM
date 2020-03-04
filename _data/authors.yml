@@ -5,5 +5,8 @@ Peter:
 
 Rob:
   name        : "Rob"
-  bio         : "Rob's bio"
-  avatar      : "/assets/images/bio-photo.jpg"
+  bio         : "Storage System expert. 
+                 Currently engaged as a Linaro Member Engineer in the Toolchain 
+                 Working Group contributing to QEMU. 
+                 Also contributing to the LISA-QEMU project."
+  avatar      : "/assets/images/RobProfile.jpg"

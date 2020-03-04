@@ -12,7 +12,7 @@ main:
     
 site_map:
   - title: "QEMU"
-    url: /qemu/home/
+    url: /qemu/
     children:
       - title: "Getting started"
         url: /qemu/getting_started/
