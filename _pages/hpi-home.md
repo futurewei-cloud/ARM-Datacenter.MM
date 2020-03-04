@@ -1,7 +1,7 @@
 ---
 layout: single
-permalink: /uss/home/
-title: "User Space Scheduler"
+permalink: /hpi/home/
+title: "Heterogeneous Processing Initiative"
 sidebar:
   nav: "site_map"
 author_profile: false
@@ -11,6 +11,6 @@ author_profile: false
 
 ## Mission statement  
 
-Argobots scaling, etc.
+LLVM, IR code, package deployment, etc.
 
-    
+   
