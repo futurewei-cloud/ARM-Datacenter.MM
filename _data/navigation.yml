@@ -16,6 +16,8 @@ site_map:
     children:
       - title: "Getting started"
         url: /qemu/getting_started/
+      - title: "Test"
+        url: /qemu/getting_started/
   - title: "Linux Kernel Scheduler"
     url: /lks/home/
   - title: "User Space Scheduler"
