@@ -1,7 +1,8 @@
 # Getting started
 
 This repo generates [ARM-Datacenter website](https://futurewei-cloud.github.io/ARM-Datacenter/).  
-Base framework is based on  [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+Base framework is based on  [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).  
+Good Starting guide may be fount on [Quick-Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)
 
 ## Install jekyll and dependencies
 ```
