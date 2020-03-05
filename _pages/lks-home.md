@@ -11,7 +11,7 @@ author_profile: false
 
 Over the past several years, ARM processors have come to dominate the smartphone industry. 
 They offer very competitive performance-per-watt ratio and allow vendors to buy the necessary 
-building blocks and design their own processors based ARMv8 architecture.
+building blocks and design their own processors based on ARMv8 architecture.
 
 ARM server processors typically have a lot more physical cores than x86 server processors.
 L1, L2 and LLC cache as well as NUMA topology is also significantly different from x86.

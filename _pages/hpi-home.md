@@ -9,8 +9,11 @@ author_profile: false
 
 {::options auto_ids="false" /}
 
-## Mission statement  
+The focus of this initiative is to research software development and distribution models for **Heterogenous Systems**.  
+A Heterogeneous System consists of multiple single and/or multicore processors of different types. 
+The simple example of Heterogeneous System may be the combination of a multicore processor with a GPU.
 
-LLVM, IR code, package deployment, etc.
+Large variety of hardware accelerators and system configurations present significant challenge for software development and distribution.
 
-   
+In our research we will evaluate feasibility of using Intermediate Representation (**IR**) code to abstract hardware specific details.
+This will allow code generation and distribution to large variety of Heterogenous Systems.
