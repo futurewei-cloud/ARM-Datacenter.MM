@@ -1,7 +1,10 @@
 ---
 layout: single
 permalink: /lks/home/
-title: "Linux Kernel Scheduler home page"
+title: "Linux Kernel Scheduler"
+sidebar:
+  nav: "site_map"
+author_profile: false
 ---
 
 {::options auto_ids="false" /}
@@ -9,5 +12,4 @@ title: "Linux Kernel Scheduler home page"
 ## Mission statement  
 
 Core scaling, etc.
-
    

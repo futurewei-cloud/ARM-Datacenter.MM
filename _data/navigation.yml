@@ -12,14 +12,14 @@ main:
     
 site_map:
   - title: "QEMU"
-    url: /qemu/home/
+    url: /qemu/
     children:
       - title: "Getting started"
-        url: /qemu/getting_started/
-      - title: "Test"
         url: /qemu/getting_started/
   - title: "Linux Kernel Scheduler"
     url: /lks/home/
   - title: "User Space Scheduler"
     url: /uss/home/
+  - title: "Heterogeneous Processing Initiative"
+    url: /hpi/home/
       
