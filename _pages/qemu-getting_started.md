@@ -3,6 +3,8 @@ layout: single
 permalink: /qemu/getting_started/
 title: "QEMU getting started"
 classes: wide
+sidebar:
+  nav: "site_map"
 ---
 
 {::options auto_ids="false" /}
@@ -19,11 +21,11 @@ Main QEMU site: [qemu.org](https://www.qemu.org/)
 
 ## Installing QEMU
 
-~~~
+```
 apt-get install qemu-system-arm
 apt-get install qemu-utils
 apt-get install qemu-efi-aarch64
-~~~
+```
 
 ### Installing packages to build QEMU on Ubuntu
 

@@ -1,7 +1,17 @@
 Peter:
   name        : "Peter"
-  bio         : "Peters bio"
+  bio         : "15 years in Enterprise Storage industry. 
+                 Currently engaged as a Linaro Member Engineer
+                 in Kernel Work Group (KWG) contributing to 
+                 Linux Kernel.
+                 Mainteiner of  LISA-QEMU project"
+                 
   avatar      : "/assets/images/PeterProfile.jpg"
+  links       :
+    - label: "LISA-QEMU"
+      icon: "fas fa-fw fa-link"
+      url: "https://github.com/rf972/lisa-qemu"
+  
 
 Rob:
   name        : "Rob"
@@ -10,3 +20,5 @@ Rob:
                  Working Group contributing to QEMU. 
                  Also contributing to the LISA-QEMU project."
   avatar      : "/assets/images/RobProfile.jpg"
+
+ 
