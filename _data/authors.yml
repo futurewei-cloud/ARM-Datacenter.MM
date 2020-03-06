@@ -4,7 +4,7 @@ Peter:
                  Currently engaged as a Linaro Member Engineer
                  in Kernel Work Group (KWG) contributing to 
                  Linux Kernel.
-                 Mainteiner of  LISA-QEMU project"
+                 Maintainer of the LISA-QEMU project"
                  
   avatar      : "/assets/images/PeterProfile.jpg"
   links       :
@@ -15,10 +15,10 @@ Peter:
 
 Rob:
   name        : "Rob"
-  bio         : "Storage System expert. 
+  bio         : "Over 20 years in the Enterprise Storage industry. 
                  Currently engaged as a Linaro Member Engineer in the Toolchain 
                  Working Group contributing to QEMU. 
-                 Also contributing to the LISA-QEMU project."
+                 Maintainer of the LISA-QEMU project."
   avatar      : "/assets/images/RobProfile.jpg"
 
  
