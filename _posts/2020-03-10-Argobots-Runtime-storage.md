@@ -3,7 +3,7 @@ title: "A Lightweight Thread based storage runtime"
 date: 2020-03-10T15:41:30-05:00
 author: Li
 categories:
-  - ARM-Datacenter
+  - uss
 tags:
   - User Space Scheduler
 ---
