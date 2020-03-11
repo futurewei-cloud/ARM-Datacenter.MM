@@ -22,3 +22,14 @@ Rob:
   avatar      : "/assets/images/RobProfile.jpg"
 
  
+Li:
+  name        : "Li"
+  bio         : "Enterprise Storage Architect. 
+                 Currently engaged in Linaro Data Center and Cloud Group. 
+                 Interested in Heterogeneous Computing Research"
+  avatar      : "/assets/images/LiProfile.jpg"
+
+Lili:
+  name        : "Lili"
+  bio         : "Enterprise Storage Architect. 
+                 Currently engaged in user space scheduler with light wight thread research" 
