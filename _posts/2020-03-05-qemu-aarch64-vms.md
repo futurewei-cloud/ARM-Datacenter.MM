@@ -6,7 +6,6 @@ categories:
   - QEMU
 tags:
   - config
-  - ARM
 classes: wide
 ---
 This is a follow-up to a prior post on [how to launch ARM aarch64 VMs from scratch](../how-to-launch-aarch64-vm).

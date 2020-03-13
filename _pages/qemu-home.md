@@ -24,7 +24,7 @@ The areas we will focus on include:
   - Enable easier change of hardware toplology including core count when building VMs.
   - Allow developers to easily test the impact of modifications on VMs for aarch64 architectures with variable topologies.  
   
-And of course we plan to contribute to open source by working with maintainers to upstream all of the above into QEMU.
+We plan to contribute to open source by working with maintainers to upstream all of the above.
   
 For more information on our current work, please see our [blog posts on QEMU](../categories/#qemu).
 
