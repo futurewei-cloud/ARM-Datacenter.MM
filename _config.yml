@@ -78,7 +78,7 @@ footer:
       url: "https://www.futurewei.com"
     - label: "RSS"
       icon: "fas fa-fw fa-rss"
-      url: "/feed.xml"
+      url: "/ARM-Datacenter/feed.xml"
 
 defaults:
   # _posts
