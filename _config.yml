@@ -19,9 +19,10 @@ logo: "assets/images/futurewei-logo-swirl-200x57.png"
 
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The ARM-Datacenter blog includes articles on QEMU, Linux kernel scheduler and other ongoing projects.
+  Our goal is to create and contribute to Software infrastructure that simplifies adoption of ARM based hardware in a Datacenter environment.
+  
+name: ARM-Datacenter blog
 #twitter_username: username
 #github_username: username
 minimal_mistakes_skin: default
@@ -57,7 +58,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-#  - jekyll-feed
+  - jekyll-feed
   - jemoji
   - jekyll-include-cache
 
@@ -75,6 +76,9 @@ footer:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://www.futurewei.com"
+    - label: "RSS"
+      icon: "fas fa-fw fa-rss"
+      url: "/feed.xml"
 
 defaults:
   # _posts
