@@ -6,11 +6,12 @@ categories:
   - QEMU
 tags:
   - config
+  - ARM
 classes: wide
 ---
 This is a follow-up to a prior post on [how to launch ARM aarch64 VMs from scratch](../how-to-launch-aarch64-vm).
 
-We are working on QEMU enhancements to support aarch64 ARM VMs inside QEMU's vm-build infrastructure.  This is a bit of test infrastructure which allows for building and testing QEMU source code within various flavors of VMs.
+We are working on [QEMU](https://www.qemu.org/) enhancements to support aarch64 ARM VMs inside QEMU's vm-build infrastructure.  This is a bit of test infrastructure which allows for building and testing QEMU source code within various flavors of VMs.
 
 The aarch64 VMs are supported for Ubuntu and CentOS VMs.
 

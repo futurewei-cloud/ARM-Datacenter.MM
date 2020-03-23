@@ -6,6 +6,7 @@ categories:
   - QEMU
 tags:
   - config
+  - ARM
 classes: wide
 ---
 The below instructions will allow for bringing up an ARM VM from scratch.

@@ -1,11 +1,12 @@
 ---
-title: "testing QEMU emulation: how to debug kvm-unit-tests"
+title: "Testing QEMU emulation: how to debug kvm-unit-tests"
 date: 2020-03-12T16:48:58-04:00
 author: Rob
 categories:
   - QEMU
 tags:
   - debugging
+  - ARM
 classes: wide
 ---
 
