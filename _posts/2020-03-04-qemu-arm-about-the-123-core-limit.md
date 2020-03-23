@@ -5,13 +5,14 @@ author: Rob
 categories:
   - QEMU
 tags:
-  - config
+  - QEMU Configuration
+  - ARM
 classes: wide
 ---
 
 <b>Why does QEMU ARM emulation limit the number of cores to 123?</b>
 
-When running a QEMU ARM emulation of a system, you might start your QEMU session with something like this[^1].
+When running a [QEMU](https://www.qemu.org/) ARM emulation of a system, you might start your QEMU session with something like this[^1].
 
 ~~~
 $ qemu-system-aarch64 -machine virt,gic-version=max -m 4G -cpu cortex-a57 -smp 16

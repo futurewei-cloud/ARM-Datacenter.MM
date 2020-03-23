@@ -5,7 +5,8 @@ author: Rob
 categories:
   - QEMU
 tags:
-  - config
+  - QEMU Configuration
+  - ARM
 classes: wide
 ---
 The below instructions will allow for bringing up an ARM VM from scratch.
