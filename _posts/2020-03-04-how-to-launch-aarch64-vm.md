@@ -5,7 +5,7 @@ author: Rob
 categories:
   - QEMU
 tags:
-  - config
+  - QEMU Configuration
   - ARM
 classes: wide
 ---

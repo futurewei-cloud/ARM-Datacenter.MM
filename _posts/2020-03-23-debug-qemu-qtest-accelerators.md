@@ -5,7 +5,7 @@ author: Rob
 categories:
   - QEMU
 tags:
-  - debugging
+  - QEMU Debugging
 classes: wide
 ---
 <B>How can we change [QEMU](https://www.qemu.org/)  QTest to use different accelerators?  And why would we do this?</B><BR>

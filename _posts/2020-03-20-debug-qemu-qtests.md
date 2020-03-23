@@ -5,7 +5,7 @@ author: Rob
 categories:
   - QEMU
 tags:
-  - debugging
+  - QEMU Debugging
 classes: wide
 ---
 
