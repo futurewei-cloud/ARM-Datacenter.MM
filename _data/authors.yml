@@ -20,6 +20,13 @@ Rob:
                  Working Group contributing to QEMU. 
                  Maintainer of the LISA-QEMU project."
   avatar      : "/assets/images/RobProfile.jpg"
+  links       :
+    - label: "QEMU"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.qemu.org/"
+    - label: "LISA-QEMU"
+      icon: "fas fa-fw fa-link"
+      url: "https://github.com/rf972/lisa-qemu"
 
  
 Li:
