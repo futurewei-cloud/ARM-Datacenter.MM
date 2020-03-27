@@ -13,7 +13,7 @@ partial: all
 |---
 | Counter | Title | URL  |
 :--------|:------|:-----|{% for post in site.posts %}
- | ![Hits](https://hitcounter.pythonanywhere.com/nocount/tag.svg?url={{ site.url }}{{ post.url }}) | {{ post.title }} | {{ post.url }} |{%- endfor -%}
+ | ![Hits](https://hitcounter.pythonanywhere.com/nocount/tag.svg?url=https://futurewei-cloud.github.io/ARM-Datacenter{{ post.url }}) | {{ post.title }} | {{ post.url }} |{%- endfor -%}
 |---
 
 
@@ -21,6 +21,6 @@ partial: all
 
 |---------|-------|------|
 | Counter | Title | URL  |
-|:-------:|:-----:|:----{% for page in site.pages %}{% if page.title and page.url != "/" %}
-| ![Hits](https://hitcounter.pythonanywhere.com/nocount/tag.svg?url={{ site.url }}{{ page.url }}) |{{ page.title }} | {{ page.url }}{% endif %}{% endfor %}
+|:--------|:------|:-----|{% for page in site.pages %}{% if page.title and page.url != "/" %}
+| ![Hits](https://hitcounter.pythonanywhere.com/nocount/tag.svg?url=https://futurewei-cloud.github.io/ARM-Datacenter{{ page.url }}) |{{ page.title }} | {{ page.url }}{% endif %}{% endfor %}
 |--
