@@ -37,4 +37,4 @@ This means to emulate the cortex-a57
 <b>-smp 16</b><br>
 The number of cores is argument to -smp, which we set to 16 above.
 
-[^1]: It is worth mentioning we omitted the disks from the command line for clarity.  <br>There is another post on [starting aarch64 VMs](../how-to-launch-aarch64-vm), which describes these additional details.
+[^1]: It is worth mentioning we omitted the disks from the command line for clarity.  <br>There is another post on [starting aarch64 VMs]({{ site.url }}/qemu/how-to-launch-aarch64-vm), which describes these additional details.

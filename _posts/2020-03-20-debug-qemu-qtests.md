@@ -87,4 +87,4 @@ It might look something like this:
  starting QEMU: exec i386-softmmu/qemu-system-i386 -qtest unix:/tmp/qtest-33869.sock -qtest-log /dev/null -chardev socket,path=/tmp/qtest-33869.qmp,id=char0 -mon chardev=char0,mode=control -display none -machine q35,kernel-irqchip=off -accel kvm -accel tcg -net none -display none -device pci-bridge,chassis_nr=1 -drive id=hd0,if=none,file=tests/acpi-test-disk-X74eKE,format=raw -device ide-hd,drive=hd0  -accel qtest
 ~~~
 
-We also posted a follow-up article on [how to change QEMU Qtest accelerators](../debug-qemu-qtest-accelerators).
+We also posted a follow-up article on [how to change QEMU Qtest accelerators]({{ site.url }}/qemu/debug-qemu-qtest-accelerators).

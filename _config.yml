@@ -23,6 +23,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Our goal is to create and contribute to Software infrastructure that simplifies adoption of ARM based hardware in a Datacenter environment.
   
 name: ARM-Datacenter blog
+url: https://futurewei-cloud.github.io/ARM-Datacenter/
+
 #twitter_username: username
 #github_username: username
 minimal_mistakes_skin: default
@@ -70,6 +72,13 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://www.futurewei.com"
+
+feed_items: 1
+feed_update_period: daily
+feed_update_frequency: 1  
+feed:
+  categories:
+    - QEMU
 
 footer:
   links:
