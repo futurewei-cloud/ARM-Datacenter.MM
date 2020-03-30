@@ -11,7 +11,7 @@ classes: wide
 ---
 The below instructions will allow for bringing up an ARM VM from scratch.
 
-It is worth mentioning that our work includes automating all of the below, resulting in a more streamlined option to building and launching the VM.  See the article on [QEMU aarch64 VMs](../qemu-aarch64-vms) for more details.
+It is worth mentioning that our work includes automating all of the below, resulting in a more streamlined option to building and launching the VM.  See the article on [QEMU aarch64 VMs]({{ site.url }}/qemu/qemu-aarch64-vms) for more details.
 
 To launch an aarch64 VM we first need to install a few dependencies, including QEMU and the qemu-efi-aarch64 package, which includes the efi firmware.
 

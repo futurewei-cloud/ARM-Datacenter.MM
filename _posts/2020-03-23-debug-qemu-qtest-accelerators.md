@@ -9,7 +9,7 @@ tags:
 classes: wide
 ---
 <B>How can we change [QEMU](https://www.qemu.org/)  QTest to use different accelerators?  And why would we do this?</B><BR>
-<span style="font-size:60%">This article is a follow-up to a prior article we posted on [how to debug QEMU Qtests](../debug-qemu-qtests).</span>
+<span style="font-size:60%">This article is a follow-up to a prior article we posted on [how to debug QEMU Qtests]({{ site.url }}/qemu/debug-qemu-qtests).</span>
 
 Each QTest will decide which accelerators it uses.  For example, the test might try to use 'kvm', which causes QEMU to use KVM to execute code. Or the test might try to use 'TCG' support, where QEMU will emulate the instructions itself.  Regardless of which path is chosen, this choice inevitably results in different code paths getting exercised inside QEMU itself.
 
