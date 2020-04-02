@@ -21,12 +21,14 @@ Rob:
                  Maintainer of the LISA-QEMU project."
   avatar      : "/assets/images/RobProfile.jpg"
   links       :
-    - label: "QEMU"
+    - label: "Github"
       icon: "fas fa-fw fa-link"
-      url: "https://www.qemu.org/"
+      url: "http://github.com/rf972"
     - label: "LISA-QEMU"
       icon: "fas fa-fw fa-link"
       url: "https://github.com/rf972/lisa-qemu"
+    - label: "QEMU"
+      url: "https://www.qemu.org/"
 
  
 Li:
