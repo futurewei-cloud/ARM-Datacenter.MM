@@ -19,16 +19,16 @@ The first step is to get your linux machine ready to run LISA-QEMU.  In this ste
 
 ~~~
 apt-get build-dep -y qemu
-apt-get install -y libfdt-dev flex bison git apt-utils
-apt-get install -y python3-yaml wget qemu-efi-aarch64 qemu-utils genisoimage qemu-user-static
+apt-get install -y python3-yaml wget git qemu-efi-aarch64 qemu-utils genisoimage qemu-user-static git
 ~~~
 Now that we have the correct dependencies, let's download the LISA-QEMU code.
 
 ~~~
 git clone https://github.com/rf972/lisa-qemu.git
 cd lisa-qemu
-git submodule update --init --recursive
+git submodule update --init --progress --recursive
 ~~~
+One note on the above.  If you do not plan to use lisa, then you can leave off the --recursive and it will update much quicker.
 
 The next step is to build a new VM.  This build command takes all the defaults.  If you want to learn more about the possible options take a look at build_image.py --help.
 
