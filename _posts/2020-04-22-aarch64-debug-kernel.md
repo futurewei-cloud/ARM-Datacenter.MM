@@ -15,7 +15,7 @@ There are many recipes online for this too, I have listed a few helpful ones at 
 
 We would like to share our steps for debug the kernel, but focused on aarch64 systems, as some of the steps might be slightly different for this type of system.
 
-First, create a folder to work in and run these commands to create the flash images:
+First, create a directory to work in and run these commands to create the flash images:
 
 ~~~
 dd if=/dev/zero of=flash1.img bs=1M count=64
@@ -27,9 +27,12 @@ Next, download a QEMU image.  We will use an ubuntu image that we previously cre
 
 We should mention that our procedure involves building our own kernel from scratch, and feeding this image to QEMU.
 
-Thus the first step is to actually create a QEMU image.  We will assume you already have an image to use.  If not, check out our article on [how to create an aarch64 VM from scratch]({{ site.url }}/qemu/qemu-aarch64-vms).  Or even easier [how to create aarch64 VM using QEMU vm-build]({{ site.url }}/qemu/how-to-launch-aarch64-vm). [Or how to create a VM using LISA-QEMU]({{ site.url }}/qemu/lisa-qemu-demo1).
+Thus the first step is to actually create a QEMU image.  We will assume you already have an image to use.  If not, check out our articles on:
+- [how to create a VM using LISA-QEMU]({{ site.url }}/qemu/lisa-qemu-demo1).
+- [how to create aarch64 VM using QEMU vm-build]({{ site.url }}/qemu/how-to-launch-aarch64-vm). 
+- [how to create an aarch64 VM from scratch]({{ site.url }}/qemu/qemu-aarch64-vms).  
 
-We prefer the latter using LISA-QEMU since we also have a helpful script to install your kernel into the VM image automatically.
+We prefer the first procedure using LISA-QEMU since we also have a helpful script to install your kernel into the VM image automatically.
 
 But don't worry, if you want to take a different route we will show all the steps for that too!
 
@@ -39,14 +42,25 @@ Installing Kernel
 You have a few options here.  One is to boot the image and install the image manually or use LISA-QEMU scripts to install it.  The below command will boot the image in case you want to use the later manual approach to boot the image, scp in the kernel (maybe a .deb file) and install it manually with deb -i <kernel>.deb.
 
 ~~~
-qemu/build/aarch64-softmmu/qemu-system-aarch64 -nographic -machine virt,gic-version=max -m 2G -cpu max -netdev user,id=vnet,hostfwd=:127.0.0.1:0-:22 -device virtio-net-pci,netdev=vnet -drive file=./mini_ubuntu.img,if=none,id=drive0,cache=writeback -device virtio-blk,drive=drive0,bootindex=0 -drive file=./flash0.img,format=raw,if=pflash -drive file=./flash1.img,format=raw,if=pflash -smp 4 
+qemu/build/aarch64-softmmu/qemu-system-aarch64 -nographic\
+                    -machine virt,gic-version=max -m 2G -cpu max\
+                    -netdev user,id=vnet,hostfwd=:127.0.0.1:0-:22\
+                    -device virtio-net-pci,netdev=vnet\ 
+                    -drive file=./mini_ubuntu.img,if=none,id=drive0,cache=writeback\ 
+                    -device virtio-blk,drive=drive0,bootindex=0\ 
+                    -drive file=./flash0.img,format=raw,if=pflash \
+                    -drive file=./flash1.img,format=raw,if=pflash -smp 4 
 ~~~
 
 To bring up QEMU with a kernel, typically you will need a kernel image (that you built), an initrd image (built after installing the kernel in your image), and the OS image (created above).
 
-Below is how to mount an image to copy out files.  You need to copy out the initrd.
-
 Keep in mind the below steps assume a raw image.  If you have a qcow2, then use qemu-img to convert it to raw first.
+For example:
+
+~~~
+qemu-img convert -O raw my_image.qcow2 my_image_output.raw
+~~~
+Below is how to mount an image to copy out files.  You need to copy out the initrd in this case.
 
 ~~~
 $ mkdir mnt
@@ -74,20 +88,30 @@ This command line will bring up your kernel image with your initrd and your OS I
 One item you might need to customize is the "root=/dev/vda1" argument.  This tells the kernel where to find your boot partition. This might vary depending on your VM image.
 
 ~~~
-qemu/build/aarch64-softmmu/qemu-system-aarch64 -nographic -machine virt,gic-version=max -m 2G -cpu max -netdev user,id=vnet,hostfwd=:127.0.0.1:0-:22 -device virtio-net-pci,netdev=vnet -drive file=./mini_ubuntu.img,if=none,id=drive0,cache=writeback -device virtio-blk,drive=drive0,bootindex=0 -drive file=./flash0.img,format=raw,if=pflash -drive file=./flash1.img,format=raw,if=pflash -smp 4 -kernel ./linux/arch/arm64/boot/Image -append "root=/dev/vda2 nokaslr console=ttyAMA0" -initrd ./initrd.img-5.5.11 -s -S
+qemu/build/aarch64-softmmu/qemu-system-aarch64 -nographic\
+                  -machine virt,gic-version=max -m 2G -cpu max\
+                  -netdev user,id=vnet,hostfwd=:127.0.0.1:0-:22\
+                  -device virtio-net-pci,netdev=vnet\
+                  -drive file=./mini_ubuntu.img,if=none,id=drive0,cache=writeback\
+                  -device virtio-blk,drive=drive0,bootindex=0\
+                  -drive file=./flash0.img,format=raw,if=pflash\
+                  -drive file=./flash1.img,format=raw,if=pflash -smp 4\
+                  -kernel ./linux/arch/arm64/boot/Image\
+                  -append "root=/dev/vda2 nokaslr console=ttyAMA0"\
+                  -initrd ./initrd.img-5.5.11 -s -S
 ~~~
 
 <B>-s</B> tells QEMU to use the TCP port :1234<BR>
 <b>-S</b> will pause at startup, waiting for the debugger to attach.
 
-Before we get started debugging, update your .gdbinit with the following:
+Before we get started debugging, update your ~/.gdbinit with the following:
 
 ~~~
 add-auto-load-safe-path linux-5.5.11/scripts/gdb/vmlinux-gdb.py
 ~~~
 
 In another window, start the debugger.
-Note, if you are on a x86 host debugging aarch64, then you need to use gdb-multiarch.  In our case below we are on an aarch64 host, so we just use gdb.
+Note, if you are on a x86 host debugging aarch64, then you need to use gdb-multiarch (sudo apt-get gdb-multiarch). In our case below we are on an aarch64 host, so we just use gdb.
 
 It's very important to note that we receive the "done" message below indicating symbols were loaded successfully, otherwise the following steps will not work.
 
@@ -134,6 +158,6 @@ We hit the breakpoint !
 
 Remember above that we used the -S option to QEMU?  This told QEMU to wait to start running the image until we connected the debugger.  Thus once we hit continue, QEMU actually starts booting the kernel.
 
-References
-[https://yulistic.gitlab.io/2018/12/debugging-linux-kernel-with-gdb-and-qemu/](https://yulistic.gitlab.io/2018/12/debugging-linux-kernel-with-gdb-and-qemu/)<BR>
-[http://nickdesaulniers.github.io/blog/2018/10/24/booting-a-custom-linux-kernel-in-qemu-and-debugging-it-with-gdb/](http://nickdesaulniers.github.io/blog/2018/10/24/booting-a-custom-linux-kernel-in-qemu-and-debugging-it-with-gdb/)
+References:
+- [debugging-linux-kernel-with-gdb-and-qemu](https://yulistic.gitlab.io/2018/12/debugging-linux-kernel-with-gdb-and-qemu/)
+- [booting-a-custom-linux-kernel-in-qemu-and-debugging-it-with-gdb](http://nickdesaulniers.github.io/blog/2018/10/24/booting-a-custom-linux-kernel-in-qemu-and-debugging-it-with-gdb/)
