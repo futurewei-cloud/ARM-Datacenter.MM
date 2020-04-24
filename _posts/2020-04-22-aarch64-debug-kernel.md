@@ -64,14 +64,12 @@ Below is how to mount an image to copy out files.  You need to copy out the init
 
 ~~~
 $ mkdir mnt
-$ sudo losetup -f -P mini_ubuntu.img
+$ sudo losetup -f -P ubuntu.img
 $ sudo losetup -l
 NAME       SIZELIMIT OFFSET AUTOCLEAR RO BACK-FILE                                DIO LOG-SEC
-/dev/loop0         0      0         0  0 /home/rob/qemu/for_peter/mini_ubuntu.img   0     512
-$ sudo mount /dev/loop0 ./mnt
-mount: /home/rob/qemu/for_peter/mnt: wrong fs type, bad option, bad superblock on /dev/loop0, missing codepage or helper program, or other error.
-rob@ARMv2-1:~/qemu/for_peter$ sudo mount /dev/loop0p2 ./mnt
-rob@ARMv2-1:~/qemu/for_peter$ ls ./mnt/boot
+/dev/loop0         0      0         0  0 ubuntu.img   0     512
+$ sudo mount /dev/loop0p2 ./mnt
+$ ls ./mnt/boot
 config-4.15.0-88-generic  grub                          initrd.img-5.5.11             System.map-5.5.11          vmlinuz-5.5.11
 config-5.5.11             initrd.img                    initrd.img.old                vmlinuz                    vmlinuz.old
 efi                       initrd.img-4.15.0-88-generic  System.map-4.15.0-88-generic  vmlinuz-4.15.0-88-generic
