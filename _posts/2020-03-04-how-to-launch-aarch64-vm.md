@@ -69,4 +69,4 @@ qemu-system-aarch64 -nographic -machine virt,gic-version=max -m 512M -cpu max -s
 
 KVM
 ---
-Assuming KVM is installed and you are running on an aarch64 host, you can use KVM.  To use KVM with QEMU, simply start QEMU with sudo or add yourself to the KVM group.
+Assuming KVM is installed and you are running on an aarch64 host, you can use KVM.  To use KVM with QEMU, simply start QEMU with sudo or add yourself to the KVM group.  Also add the -enable-kvm switch to the QEMU command line.
