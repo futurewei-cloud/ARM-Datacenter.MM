@@ -66,3 +66,7 @@ qemu-system-aarch64 -nographic -machine virt,gic-version=max -m 512M -cpu max -s
 -drive file=ubuntu-image.img,if=none,id=drive0,cache=writeback -device virtio-blk,drive=drive0,bootindex=0 \
 -drive file=flash0.img,format=raw,if=pflash -drive file=flash1.img,format=raw,if=pflash 
 ~~~
+
+KVM
+---
+Assuming KVM is installed and you are running on an aarch64 host, you can use KVM.  To use KVM with QEMU, simply start QEMU with sudo or add yourself to the KVM group.
