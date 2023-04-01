@@ -1,3 +1,5 @@
+"This Project has been archived by the owner, who is no longer providing support.  The project remains available to authorized users on a "read only" basis."
+
 # Getting started
 
 This repo generates [ARM-Datacenter website](https://futurewei-cloud.github.io/ARM-Datacenter/).
